@@ -217,7 +217,7 @@ router.get('/admin/overview', isAdmin, async (req, res) => {
       const imagesTotal = images.length;
       const instancesTotal = instances.length;
 
-      res.render('admin/overview', { req, user: req.user, usersTotal, nodesTotal, imagesTotal, instancesTotal, version: config.version, name: await db.get('name') || 'Skyport', logo: await db.get('logo') || false });
+      res.render('admin/overview', { req, user: req.user, usersTotal, nodesTotal, imagesTotal, instancesTotal, version: config.version, name: await db.get('name') || 'Lunarix', logo: await db.get('logo') || false });
   } catch (error) {
       res.status(500).send({ error: 'Failed to retrieve data from the database.' });
   }
