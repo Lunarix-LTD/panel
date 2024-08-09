@@ -29,7 +29,7 @@ router.get('/instance/:id/startup', async (req, res) => {
         }
 
         res.render('instance/startup.ejs', {
-            name: await db.get('name') || 'Skyport',
+            name: await db.get('name') || 'Lunarix',
             logo: await db.get('logo') || false,
             req,
             user: req.user,
@@ -100,7 +100,7 @@ async function prepareRequestData(image, memory, cpu, ports, name, node, id, con
         method: 'post',
         url: `http://${node.address}:${node.port}/instances/redeploy/${containerId}`,
         auth: {
-            username: 'Skyport',
+            username: 'Lunarix',
             password: node.apiKey
         },
         headers: { 
