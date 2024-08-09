@@ -65,7 +65,7 @@ function prepareEditRequestData(instance, Image, Memory, Cpu) {
     method: 'put',
     url: `http://${node.address}:${node.port}/instances/edit/${instance.ContainerId}`,
     auth: {
-      username: 'Skyport',
+      username: 'Lunarix',
       password: node.apiKey
     },
     headers: { 
