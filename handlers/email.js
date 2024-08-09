@@ -5,7 +5,7 @@ const config = require('../config.json');
 
 async function getSMTPSettings() {
   const smtpSettings = await db.get('smtp_settings');
-  const name = await db.get('name') || 'Skyport';
+  const name = await db.get('name') || 'Lunarix';
 
   if (!smtpSettings) {
     throw new Error('SMTP settings not found');
@@ -80,7 +80,7 @@ async function sendWelcomeEmail(email, username, password) {
                   <li><strong>Username:</strong> ${username}</li>
                   <li><strong>Password:</strong> ${password}</li>
                 </ul>
-                <p>We hope you enjoy using ${await db.get('name') || 'Skyport'}!</p>
+                <p>We hope you enjoy using ${await db.get('name') || 'Lunarix'}!</p>
               </div>
               <div class="footer">
                 <p>This is an automated message. Please do not reply.</p>
@@ -144,7 +144,7 @@ async function sendTestEmail(recipientEmail) {
       const mailOptions = {
         from: `${smtpSettings.fromName} <${smtpSettings.fromAddress}>`,
         to: recipientEmail,
-        subject: 'Skyport Test Message',
+        subject: 'Lunarix Test Message',
         html: `
           <!DOCTYPE html>
           <html>
@@ -167,7 +167,7 @@ async function sendTestEmail(recipientEmail) {
                       <tr>
                         <td style="padding: 25px 0; text-align: center;">
                           <a href="${config.domain}" target="_blank" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #2F3133; text-decoration: none; text-shadow: 0 1px 0 white;">
-                            ${await db.get('name') || 'Skyport'}
+                            ${await db.get('name') || 'Lunarix'}
                           </a>
                         </td>
                       </tr>
@@ -187,7 +187,7 @@ async function sendTestEmail(recipientEmail) {
                                 </p>
                                 <p>
                                   Regards,
-                                  <br>${await db.get('name') || 'Skyport'}
+                                  <br>${await db.get('name') || 'Lunarix'}
                                 </p>
                               </td>
                             </tr>
@@ -201,7 +201,7 @@ async function sendTestEmail(recipientEmail) {
                             <tr>
                               <td style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #AEAEAE; padding: 35px; text-align: center;">
                                 <p style="margin-top: 0; color: #74787E; font-size: 12px; line-height: 1.5em;">
-                                  &copy; ${new Date().getFullYear()} ${await db.get('name') || 'Skyport'}
+                                  &copy; ${new Date().getFullYear()} ${await db.get('name') || 'Lunarix'}
                                 </p>
                               </td>
                             </tr>
