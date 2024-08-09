@@ -26,7 +26,7 @@ router.get('/instance/:id/users', async (req, res) => {
         const instanceName = instance.Name;
         const allPluginData = Object.values(plugins).map(plugin => plugin.config);
 
-        res.render('instance/users', { req, users, user: req.user, instance_name: instanceName, name: await db.get('name') || 'Skyport', logo: await db.get('logo') || false, addons: {
+        res.render('instance/users', { req, users, user: req.user, instance_name: instanceName, name: await db.get('name') || 'Lunarix', logo: await db.get('logo') || false, addons: {
             plugins: allPluginData
         } });
     } catch (err) {
