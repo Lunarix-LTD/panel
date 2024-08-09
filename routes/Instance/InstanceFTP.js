@@ -48,7 +48,7 @@ router.get("/instance/:id/ftp", async (req, res) => {
             method: 'get',
             url: `http://${instance.Node.address}:${instance.Node.port}/ftp/info/${instance.VolumeId}`,
             auth: {
-                username: 'Skyport',
+                username: 'Lunarix',
                 password: instance.Node.apiKey
             },
             headers: { 
@@ -68,7 +68,7 @@ router.get("/instance/:id/ftp", async (req, res) => {
                 logindata, 
                 user: req.user, 
                 instance_name: instance.Name, 
-                name: await db.get('name') || 'Skyport', 
+                name: await db.get('name') || 'Lunarix', 
                 logo: await db.get('logo') || false, 
                 addons: {
                     plugins: allPluginData
