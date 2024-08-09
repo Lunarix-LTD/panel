@@ -39,7 +39,7 @@ router.get("/instance/:id/archives", async (req, res) => {
                 method: 'get',
                 url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
                 auth: {
-                    username: 'Skyport',
+                    username: 'Lunarix',
                     password: instance.Node.apiKey
                 },
                 headers: { 
@@ -53,7 +53,7 @@ router.get("/instance/:id/archives", async (req, res) => {
 
                 const allPluginData = Object.values(plugins).map(plugin => plugin.config);
                 const settings = await db.get('settings');
-                const name = await db.get('name') || 'Skyport';
+                const name = await db.get('name') || 'Lunarix';
                 const logo = await db.get('logo') || false;
 
                 res.render('instance/archives', { 
@@ -118,7 +118,7 @@ router.post('/instance/:id/archives/create', async (req, res) => {
     const RequestData = {
         method: 'post',
        // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
-        url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/${instance.VolumeId}/create`,
+        url: `http://Lunarix:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/${instance.VolumeId}/create`,
         headers: { 
             'Content-Type': 'application/json'
         }
@@ -169,7 +169,7 @@ router.post('/instance/:id/archives/delete/:archivename', async (req, res) => {
     const RequestData = {
         method: 'post',
        // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
-        url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/delete/${archivename}`,
+        url: `http://Lunarix:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/delete/${archivename}`,
         headers: { 
             'Content-Type': 'application/json'
         }
@@ -222,7 +222,7 @@ router.post('/instance/:id/archives/rollback/:archivename', async (req, res) => 
     const RequestData = {
         method: 'post',
        // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
-        url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/rollback/${instance.VolumeId}/${archivename}`,
+        url: `http://Lunarix:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/rollback/${instance.VolumeId}/${archivename}`,
         headers: { 
             'Content-Type': 'application/json'
         }
