@@ -85,7 +85,7 @@ router.get("/instance/:id/files/create", async (req, res) => {
 
     const allPluginData = Object.values(plugins).map(plugin => plugin.config);
 
-    res.render('instance/createFile', { req, user: req.user, name: await db.get('name') || 'Skyport', logo: await db.get('logo') || false, addons: {
+    res.render('instance/createFile', { req, user: req.user, name: await db.get('name') || 'Lunarix', logo: await db.get('logo') || false, addons: {
         plugins: allPluginData
     } });
 });
