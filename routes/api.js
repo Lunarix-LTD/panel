@@ -157,7 +157,7 @@ router.post('/api/instances/deploy', validateApiKey, async (req, res) => {
       method: 'post',
       url: `http://${Node.address}:${Node.port}/instances/create`,
       auth: {
-        username: 'Skyport',
+        username: 'Lunarix',
         password: Node.apiKey
       },
       headers: { 
