@@ -54,7 +54,7 @@ router.get("/instance/:id/db", async (req, res) => {
                 databases, 
                 user: req.user, 
                 instance_name: instance.Name, 
-                name: await db.get('name') || 'Skyport', 
+                name: await db.get('name') || 'Lunarix', 
                 logo: await db.get('logo') || false, 
                 addons: {
                     plugins: allPluginData
@@ -114,7 +114,7 @@ router.post("/instance/:id/db/create/:name", async (req, res) => {
             method: 'post',
             url: `http://${instance.Node.address}:${instance.Node.port}/database/create/${encodeURIComponent(name)}`,
             auth: {
-                username: 'Skyport',
+                username: 'Lunarix',
                 password: instance.Node.apiKey
             },
             headers: { 
