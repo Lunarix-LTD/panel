@@ -1,21 +1,9 @@
-/*
- *           __                          __ 
-*      _____/ /____  ______  ____  _____/ /_
- *    / ___/ //_/ / / / __ \/ __ \/ ___/ __/
- *   (__  ) ,< / /_/ / /_/ / /_/ / /  / /_  
- *  /____/_/|_|\__, / .___/\____/_/   \__/  
- *           /____/_/                  
+/*          
  *              
- *  Skyport Panel 0.2.0 (Piledriver)
+ *  Lunarix Panel (Russia)
  *  (c) 2024 Matt James and contributers
  * 
 */
-
-/**
- * @fileoverview Main server file for Skyport Panel. Sets up the express application,
- * configures middleware for sessions, body parsing, and websocket enhancements, and dynamically loads route
- * modules. This file also sets up the server to listen on a configured port and initializes logging.
- */
 
 const express = require('express');
 const session = require('express-session');
