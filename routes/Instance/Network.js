@@ -44,7 +44,7 @@ router.get("/instance/:id/network", async (req, res) => {
         instance,
         ports,
         user: req.user,
-        name: await db.get('name') || 'Skyport',
+        name: await db.get('name') || 'Lunarix',
         logo: await db.get('logo') || false,
         addons: {
             plugins: allPluginData
