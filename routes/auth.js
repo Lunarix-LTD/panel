@@ -460,7 +460,7 @@ router.get('/auth/reset/:token', async (req, res) => {
 
   try {
     const users = await db.get('users') || [];
-    const name = await db.get('name') || 'Skyport';
+    const name = await db.get('name') || 'Lunarix';
     const logo = await db.get('logo') || false;
     const user = users.find(u => u.resetToken === token);
 
